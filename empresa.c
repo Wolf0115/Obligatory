@@ -13,11 +13,20 @@ using namespace std;
 struct nodo_empresa{
 	// aquí deben figurar los campos que usted considere necesarios para manipular el organigrama.
 	// Se deberan crear nuevos modulos e incluirlos.
+	Cadena nombre;
+	Empresa iz;
+	Empresa de;
+	
 };
 
 TipoRet CrearOrg(Empresa &e, Cadena cargo){
 // Inicializa la empresa y crea el primer cargo de la empresa.
-// Originalmente la misma debería  estar vacía, en otro caso la operación quedará sin efecto. 
+// Originalmente la misma debería  estar vacía, en otro caso la operación quedará sin efecto.
+	if(&e != NULL){
+		Empresa aux = new(nodo_empresa);
+		aux->nombre = cargo;
+		return OK;
+	}
 	return NO_IMPLEMENTADA;
 }
 
